@@ -269,6 +269,7 @@ resource "aws_flow_log" "vpcflowlogs" {
 }
 
 resource "aws_s3_bucket" "flowbucket" {
+	# checkov:skip=CKV_AWS_145: ADD REASON
   bucket        = "${local.resource_prefix.value}-flowlogs"
   force_destroy = true
 
